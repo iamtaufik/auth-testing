@@ -15,7 +15,7 @@ function Home() {
         password,
       });
       console.log(response.data);
-      if (!response.data.token) {
+      if (response.data.token) {
         return navigate('/product');
       }
     } catch (error) {
