@@ -6,8 +6,9 @@ const Product = () => {
 
   const getProduct = async () => {
     try {
-      const result = await axios.get('http://localhost:5000/product');
-      setProducts(result.data);
+      const result = await axios.get('https://jwt-auth-one.vercel.app/login');
+      // setProducts(result.data);
+      console.log(result.data);
     } catch (error) {
       console.log(error.message);
     }
@@ -17,12 +18,13 @@ const Product = () => {
   }, []);
   return (
     <>
-      {products.map((product, index) => (
+      <h1>hello world</h1>
+      {/* {products.map((product, index) => (
         <ul key={index}>
           <li>{product.name}</li>
           <li>{product.price}</li>
         </ul>
-      ))}
+      ))} */}
     </>
   );
 };
