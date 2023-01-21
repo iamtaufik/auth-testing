@@ -14,10 +14,10 @@ function Home() {
         username,
         password,
       });
-      // if (!response.data.error) {
-      //   return navigate('/product');
-      // }
       console.log(response.data);
+      if (!response.data.token) {
+        return navigate('/product');
+      }
     } catch (error) {
       console.log(error.message);
     }
